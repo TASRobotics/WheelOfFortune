@@ -61,3 +61,7 @@ take about 20% of your data and put it in and testing dataset
 the sort80.20.py code only works if your paths are the default paths, otherwise,change the source code
 
 Its probably better if it wasn't a random dataset and was carefully picked to prevent overfitting, but to save time thats what was done
+
+## Save the datasets in files
+
+Run save.py
