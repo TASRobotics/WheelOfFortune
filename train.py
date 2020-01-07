@@ -35,6 +35,6 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-model.fit(train_p, train_l, epochs=3)
+model.fit(train_p, train_l, epochs=100)
 
 model.save('trained_model.h5')
