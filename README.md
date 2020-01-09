@@ -11,9 +11,11 @@ Steps:
 
 Pip libraries to install:
 
-- tensorflow 2.0
+- tensorflow-gpu
+  - 2.0
+- matplotlib
 - keras
 - numpy
 - regex
 - opencv-python
-- absl
+- absl-py
