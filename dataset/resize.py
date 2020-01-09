@@ -4,14 +4,14 @@ import re
 from absl import app
 from absl import flags
 
-FLAGS = flags
+FLAGS = flags.FLAGS
 flags.DEFINE_string('path', './photos', 'path to photos')
 flags.DEFINE_integer('x',1280, 'final x dimension')
 flags.DEFINE_integer('y',720, 'final y dimension')
 
 def main(argv):
     directory = os.walk(FLAGS.path+'/')
-    for(roots, dirs, files in directory):
+    for roots, dirs, files in directory:
         for filename in files:
             name = FLAGS.path+'/'+filename
             if re.search('.+(\.jpg)', filename):
