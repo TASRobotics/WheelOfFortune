@@ -8,3 +8,12 @@ Steps:
 2. Brute Forced Network Testing
 3. Further Training
 4. exporting the model
+
+Pip libraries to install:
+
+- tensorflow 2.0
+- keras
+- numpy
+- regex
+- opencv-python
+- absl
