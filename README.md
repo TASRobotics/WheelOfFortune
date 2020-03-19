@@ -2,7 +2,7 @@
 
 Uses the AlexNet architecture to classify the angle of the control panel in the FRC 2020 game
 
-Steps:
+## Steps:
 
 1. Image Preprocessing
 3. training
@@ -10,7 +10,11 @@ Steps:
 
 Make sure your python version is 3.4> <3.7
 
-Pip libraries to install:
+## pretrained model
+
+The model has been already trained to work at a specific angle. You can download the latest working version for the releases and transfer learn it to work on your robot.
+
+## Pip libraries to install:
 
 - tensorflow-gpu
   - 2.0
