@@ -6,7 +6,7 @@ from absl import app
 from absl import flags
 
 FLAGS = flags.FLAGS
-flags.DEFINE_string('path', './photos', 'where do you want to start labeling from')
+flags.DEFINE_string('path', './extra/photos', 'where do you want to start labeling from')
 flags.DEFINE_integer('start', 1, 'where do you want to start labeling from')
 
 labels = [
@@ -14,8 +14,8 @@ labels = [
 ]
 
 def main(argv):   
-    if not os.path.exists('./labels'):
-        os.mkdir('./labels')
+    if not os.path.exists('./extra/labels'):
+        os.mkdir('./extra/labels')
     directory = os.walk(FLAGS.path+'/')
     photoN = 0
     for roots, dirs, files in directory:
@@ -45,8 +45,8 @@ def main(argv):
                         if labeled == True:
                             pass
                         elif inlabel == 'd':
-                            if os.path.isfile('./labels/'+filename+'.label'):
-                                os.remove('./labels/'+filename+'.label')
+                            if os.path.isfile('./extra/labels/'+filename+'.label'):
+                                os.remove('./extra/labels/'+filename+'.label')
                             break
                         elif inlabel == 'q':
                             cv2.destroyAllWindows()
@@ -59,7 +59,7 @@ def main(argv):
                     
                 #write to file
                 if labeled:
-                    labelfile = open('./labels/'+filename+'.label', "w")
+                    labelfile = open('./extra/labels/'+filename+'.label', "w")
                     labelfile.write(inlabel)
                     labelfile.close()
 

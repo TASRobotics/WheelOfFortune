@@ -14,8 +14,9 @@ def main(argv):
     directory = os.walk(FLAGS.videos_path+'/')
     if not os.path.exists(FLAGS.save_path):
         os.makedirs(FLAGS.save_path)
+
     for roots, dirs, files in directory:
-        photoN = 0
+        photoN = 1199
         for filename in files:
             if re.search('.+(\.%s)' % FLAGS.video_extension, filename):
                 vidcap = cv2.VideoCapture(FLAGS.videos_path+'/'+filename)
